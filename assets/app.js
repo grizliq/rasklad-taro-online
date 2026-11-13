@@ -16,10 +16,10 @@
     return '<svg viewBox="0 0 340 585" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">' +
       '<defs>' +
       '<linearGradient id="tb" x1="0" y1="0" x2="1" y2="1">' +
-      '<stop offset="0" stop-color="#2d2070"/><stop offset="1" stop-color="#160e3c"/>' +
+      '<stop offset="0" stop-color="#7B2333"/><stop offset="1" stop-color="#4a1420"/>' +
       '</linearGradient>' +
       '<pattern id="tp" width="40" height="40" patternUnits="userSpaceOnUse">' +
-      '<path d="M20 7l3.4 9.6L33 20l-9.6 3.4L20 33l-3.4-9.6L7 20l9.6-3.4z" fill="rgba(185,169,255,.22)"/>' +
+      '<path d="M20 7l3.4 9.6L33 20l-9.6 3.4L20 33l-3.4-9.6L7 20l9.6-3.4z" fill="rgba(233,199,127,.20)"/>' +
       '</pattern>' +
       '</defs>' +
       '<rect width="340" height="585" fill="url(#tb)"/>' +

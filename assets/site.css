@@ -640,3 +640,84 @@ body::after{
   .pn a:nth-child(2){display:none;}
   .arc__actions .btn{width:100%;}
 }
+
+/* ============================================================
+   Светлая палитра поверх вёрстки raskladtaroonline.ru.
+   Владелец попросил: структура и шрифт — как на старом сайте, цвета —
+   как в светлой версии (бумага, бордо, охра). Так сайты ещё и не похожи
+   друг на друга с первого взгляда.
+
+   Почти всё перекрашивается через токены. Тёмные островки — баннер
+   Telegram, телефон и финальный призыв — получают свои токены локально,
+   иначе текст внутри них стал бы тёмным на тёмном.
+   ============================================================ */
+:root{
+  --bg:#F5EFE4;
+  --bg-deep:#EDE4D3;
+  --surface:#FBF8F2;
+  --surface-2:#FFFFFF;
+  --surface-solid:#FBF8F2;
+  --ink:#241B16;
+  --prose:#3B312A;
+  --muted:#7A6B5D;
+  --dim:#9A8B7C;
+  --violet:#7B2333;
+  --violet-hi:#922B3E;
+  --violet-deep:#5E1825;
+  --violet-tint:rgba(123,35,51,.08);
+  --violet-line:rgba(123,35,51,.35);
+  --lav:#7B2333;
+  --gold:#A97B2C;
+  --gold-line:rgba(169,123,44,.45);
+  --gold-tint:rgba(169,123,44,.10);
+  --line:#E2D6C3;
+  --line-strong:#CDBDA3;
+}
+body::before{
+  background:
+    radial-gradient(760px 520px at 82% -8%, rgba(169,123,44,.16) 0%, rgba(169,123,44,0) 62%),
+    radial-gradient(620px 480px at 4% 12%, rgba(123,35,51,.08) 0%, rgba(123,35,51,0) 60%),
+    var(--bg);
+}
+body::after{display:none;}
+
+.nav__bar{background:rgba(251,248,242,.86);}
+.nav.is-stuck .nav__bar{box-shadow:0 18px 40px -28px rgba(36,27,22,.45);}
+.logo__text{color:var(--ink);}
+.logo__sub{color:var(--violet);font-style:italic;}
+
+.btn--violet{background:var(--violet);box-shadow:0 14px 30px -16px rgba(123,35,51,.8);}
+.btn--violet:hover{background:var(--violet-hi);box-shadow:0 18px 36px -16px rgba(123,35,51,.9);}
+.btn--ghost{background:var(--surface);}
+.btn--ghost:hover{color:var(--violet);}
+
+.tcard{background:#4a1420;border-color:rgba(36,27,22,.18);box-shadow:0 18px 38px -20px rgba(36,27,22,.55);}
+.tcard--back{background:#5E1825;border-color:var(--gold-line);}
+.deal__ask{background:rgba(251,248,242,.9);}
+.pos,.read,.case,.spread,.faq-item,.seo__toc,.tbl{box-shadow:0 1px 0 rgba(36,27,22,.04);}
+.agrid a:hover .tcard{box-shadow:0 22px 40px -18px rgba(123,35,51,.55);}
+.arc .tcard{box-shadow:0 0 0 1px var(--gold-line),0 34px 64px -30px rgba(36,27,22,.6);}
+
+.yn--yes,.yn--maybe_yes{color:#3E6B48;}
+.yn--no,.yn--maybe_no{color:#7B2333;}
+.yn--unclear{color:#A97B2C;}
+
+/* тёмный баннер Telegram — главный акцент страницы */
+.tg__card{
+  --ink:#FFFFFF;--prose:#E6DCCB;--muted:#BFB2A0;--dim:#9A8B7C;--line:rgba(255,255,255,.12);--line-strong:rgba(255,255,255,.24);--surface:rgba(255,255,255,.06);
+  background:#241B16;border-color:#241B16;color:var(--ink);
+}
+.tg__card::after{background:radial-gradient(520px 320px at 88% 10%, rgba(42,171,238,.20) 0%, rgba(42,171,238,0) 62%);}
+.tg__card .btn--ghost{background:transparent;color:#fff;}
+.phone{
+  --ink:#F3EFFE;--prose:#C3BBE2;--muted:#9A90C2;--dim:#766D9C;--line:rgba(255,255,255,.10);--surface:rgba(255,255,255,.05);--lav:#E9C77F;
+  color:var(--ink);
+}
+.mini__btn{background:#7B2333;}
+.mini__user{background:#5E1825;}
+
+/* финальный призыв — бордо */
+.cta__card{--ink:#FFFFFF;background:#5E1825;border-color:#5E1825;}
+.cta__card::after{background:radial-gradient(480px 300px at 86% 8%, rgba(233,199,127,.22) 0%, rgba(233,199,127,0) 62%);}
+.cta__card .btn--violet{background:#E9C77F;color:#241B16;box-shadow:0 14px 30px -16px rgba(0,0,0,.6);}
+.cta__card .btn--violet:hover{background:#fff;}
