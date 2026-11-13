@@ -640,6 +640,12 @@ body::after{
   .pn a:nth-child(2){display:none;}
   .arc__actions .btn{width:100%;}
 }
+/* Промо: карты на главной не переворачиваются — расклад только в Vitrio */
+.deal--promo .slot__pos,.deal--promo .slot__keys{opacity:1}
+.deal--promo .slot__flip{display:block;transition:transform .25s var(--ease)}
+.deal--promo .slot__flip:hover{transform:translateY(-6px)}
+.read__go{text-align:center;margin-top:30px}
+.read__pos,.read__name{display:block}
 
 /* ============================================================
    Светлая палитра поверх вёрстки raskladtaroonline.ru.
