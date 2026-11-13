@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Host: https://rasklad-taro-online.com
+Sitemap: https://rasklad-taro-online.com/sitemap.xml
